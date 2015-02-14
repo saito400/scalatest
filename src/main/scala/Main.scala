@@ -7,6 +7,11 @@ object Main {
     val re = add(1,2)
     println(re)
 
+    val f2 = add _
+
+    val re2 = f2(1,2)
+
+    println(re2)
     println("end")
 
   }
