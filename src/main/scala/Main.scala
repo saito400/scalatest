@@ -12,12 +12,24 @@ object Main {
     val re2 = f2(1,2)
 
     println(re2)
+
+    println(add2(2)(3))
+
     println("end")
 
   }
 
 
   def add(val1: Int, val2: Int): Int = {
+
+
+    val1 + val2
+
+
+  }
+
+
+  def add2(val1: Int)(val2: Int): Int = {
 
 
     val1 + val2
