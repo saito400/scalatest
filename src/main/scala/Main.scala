@@ -14,7 +14,7 @@ object Main {
     println(re2)
 
     println(add2(2)(3))
-
+    println(add3(1,2)(3))
     println("end")
 
   }
@@ -37,5 +37,14 @@ object Main {
 
   }
 
+
+
+  def add3(val1: Int,val2: Int)(val3: Int): Int = {
+
+
+    val1 + val2 + val3
+
+
+  }
 
 }
