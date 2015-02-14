@@ -36,6 +36,10 @@ object Main {
 
 case class Class1(name: String, value: String)
 
+case class Class2(name: String, value: String)
+
+case class Class3(name: String, value: String)
+
 
 
 
