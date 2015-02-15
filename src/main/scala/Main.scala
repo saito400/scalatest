@@ -15,6 +15,9 @@ object Main {
 
     println(add2(2)(3))
     println(add3(1, 2)(3))
+
+
+
     println("end")
 
   }
@@ -31,14 +34,27 @@ object Main {
     val1 + val2 + val3
   }
 
+  def printTwoParams(p1: String, p2: String): Unit = {
+    println(p1 + " : " + p2)
+  }
 
 }
 
 case class Class1(name: String, value: String)
 
-case class Class2(name: String, value: String)
+case class Class2(name: String, value: String) {
 
-case class Class3(name: String, value: String)
+  def returnC3(param: String) {
+    val c3 = Class3(param)
+    c3
+  }
+
+}
+
+case class Class3(name: String) {
+
+
+}
 
 
 
