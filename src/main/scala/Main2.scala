@@ -9,4 +9,14 @@ object Main2 extends App {
 
   println(s)
 
+
+  println(twice(_ + 2, 5))
+
+
+  def twice(op: Double => Double, x: Double) = op(op(x))
+
+
+
+
+
 }
