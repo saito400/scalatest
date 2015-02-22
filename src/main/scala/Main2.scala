@@ -24,7 +24,9 @@ object Main2 extends App {
   def mapTest(m: Map[String,Any]) = {
 
     val mm = m match {
-      case m: Map[_,_] => m("a")
+      case m: Map[_,_] => m("a") match {
+        case mmm: Map[String,_] => mmm("aa")
+      }
       case _ => None
 
     }
