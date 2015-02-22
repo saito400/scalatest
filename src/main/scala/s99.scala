@@ -22,6 +22,9 @@ object s99 extends App {
     case (n, _ :: tail) => p03Recursive(n - 1, tail)
   }
 
+  def p04[A](l:List[A]) : Int = {
 
+    l.length
+  }
 
 }
