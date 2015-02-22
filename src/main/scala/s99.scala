@@ -27,4 +27,11 @@ object s99 extends App {
     l.length
   }
 
+  def p05[A](l: List[A]) : List[A] = {
+
+    l.reverse
+
+
+  }
+
 }
