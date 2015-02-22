@@ -29,7 +29,7 @@ object Main2 extends App {
 
     }
 
-    println(mm)
+    println("mm : " + mm)
 
   }
 
