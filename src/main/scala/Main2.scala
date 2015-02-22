@@ -12,10 +12,10 @@ object Main2 extends App {
 
   println(twice(_ + 2, 5))
 
-  val m = Map("a" -> Map("aa" -> "bb"))
+  val m = Map("a" -> Map("aa" -> Map("aaa" -> "bbb")))
 
   println(m)
-  println(m("a")("aa"))
+  println(m("a")("aa")("aaa"))
 
   mapTest(m)
 
@@ -24,7 +24,7 @@ object Main2 extends App {
   def mapTest(m: Map[String,Any]) = {
 
     val mm = m match {
-      case m: Map[String,Map[String,String]] => m("a")("aa")
+      case m: Map[_,_] => m("a")
       case _ => None
 
     }
