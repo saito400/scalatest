@@ -35,4 +35,8 @@ object s99 extends App {
 
   def p06[A](ls: List[A]): Boolean = ls == ls.reverse
 
+  def p07(ls: List[Any]): List[Any] = ls flatMap {
+    case ms: List[_] => p07(ms)
+    case e => List(e)
+  }
 }
