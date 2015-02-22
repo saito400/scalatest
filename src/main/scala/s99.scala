@@ -11,4 +11,11 @@ object s99 extends App {
     l.last
 
   }
+
+  def p02[A](list: List[A]):A = list match {
+    case t :: _ ::Nil => t
+    case _ :: tail     => p02(tail)
+    case _ => throw new NoSuchElementException
+  }
+
 }
