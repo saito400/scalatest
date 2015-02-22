@@ -16,7 +16,9 @@ class S99Spec extends FunSpec with Matchers {
       s99.p03(2, List(1, 1, 2, 3, 5, 8)) should be (2)
     }
 
-
+    it("p03b") {
+      s99.p03Recursive(2, List(1, 1, 2, 3, 5, 8)) should be (2)
+    }
 
 
   }

@@ -17,6 +17,11 @@ object s99 extends App {
     list(position)
   }
 
+  def p03Recursive[A](n: Int, list:List[A]) : A = (n,list) match {
+    case (0, h :: _   ) => h
+    case (n, _ :: tail) => p03Recursive(n - 1, tail)
+  }
+
 
 
 }
