@@ -12,6 +12,10 @@ object Main2 extends App {
 
   println(twice(_ + 2, 5))
 
+  val m = Map("a" -> Map("aa" -> "bb"))
+
+  println(m("a")("aa"))
+
 
   def twice(op: Double => Double, x: Double) = op(op(x))
 
