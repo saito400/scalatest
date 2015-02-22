@@ -31,7 +31,8 @@ object s99 extends App {
 
     l.reverse
 
-
   }
+
+  def p06[A](ls: List[A]): Boolean = ls == ls.reverse
 
 }
