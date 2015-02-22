@@ -25,13 +25,17 @@ object Main2 extends App {
 
     val mm = m match {
       case m: Map[_,_] => m("a") match {
-        case mmm: Map[String,_] => mmm("aa")
+        case mmm: Map[String,_] => mmm("aa") match {
+          case mmmm:Map[String,_] => mmmm
+          case _ => throw new Exception
+        }
+        case _ => throw new Exception
       }
-      case _ => None
-
+      case _ => throw new Exception
     }
 
     println("mm : " + mm)
+    println("mm : " + mm("aaa"))
 
   }
 
