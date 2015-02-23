@@ -8,8 +8,14 @@ object ssp extends App {
     yield file
   }
 
+  def fileEnding(query: String) =
+    fileMatching(query, _.endsWith(_))
 
+  def fileContaining(query: String) =
+    fileMatching(query, _.contains(_))
 
+  def fileRegex(query: String) =
+    fileMatching(query, _.matches(_))
 
   private def filesHere(): Seq[File] = {
     Seq(new File("file1"), new File("file2"), new File("file3"))
