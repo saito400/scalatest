@@ -4,6 +4,10 @@ object ssp extends App {
 
   println("start")
 
+  println(fileEnding(".dat"))
+  println(fileRegex(".*meet.*"))
+  println(fileContaining("readme"))
+  println(fileEnding("nomatch"))
 
   println("end")
 
@@ -22,6 +26,6 @@ object ssp extends App {
     fileMatching(query, _.matches(_))
 
   private def filesHere(): Seq[File] = {
-    Seq(new File("file1"), new File("file2"), new File("file3"))
+    Seq(new File("test.dat"), new File("readme.txt"), new File("meeting.ppt"))
   }
 }
