@@ -2,6 +2,10 @@ import java.io.File
 
 object ssp extends App {
 
+  println("start")
+
+
+  println("end")
 
   def fileMatching(query: String, matcher: (String, String) => Boolean) = {
     for (file <- filesHere; if matcher(file.getName, query))
