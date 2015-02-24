@@ -39,4 +39,7 @@ object s99 extends App {
     case ms: List[_] => p07(ms)
     case e => List(e)
   }
+
+
+
 }
