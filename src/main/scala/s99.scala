@@ -40,6 +40,10 @@ object s99 extends App {
     case e => List(e)
   }
 
+//  def p08(list: List[Symbol]): List[Symbol] = {
+//
+//    list.fold()
+//  }
 
 
 }
