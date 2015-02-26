@@ -16,9 +16,13 @@ object Main3 extends App {
 
   def f(map: Map[String, List[Any]])  = {
 
-    val m = map.asInstanceOf[Map[String, List[String]]]
+//    val m = map.asInstanceOf[Map[String, List[String]]]
+//    val re = m.get("key1").map(_.head.toLong).getOrElse(0)
 
-    val re = m.get("key1").map(_.head.toLong).getOrElse(0)
+    val m2 = map.asInstanceOf[Map[String, List[Int]]]
+    val re2 = m2.get("key1").map(_.head.toLong).getOrElse(0)
+
+    println(re2)
 
   }
 }
