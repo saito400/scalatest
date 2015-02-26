@@ -11,9 +11,17 @@ object Main4 extends App {
   val map: Map[String, List[String]] = Map("key1" -> List("val1","val2"))
 
 
+  // update to  val jobType: Option[Array[String]],
+
+
   println(map.get("key1"))
 
 
+  println(map.get("key1").map( v => Some(v.toArray)).getOrElse(None))
+
+  val a = map.get("key1").map( v => Some(v.toArray)).getOrElse(None)
+
 
   println("end")
+
 }
