@@ -40,6 +40,13 @@ object s99 extends App {
     case e => List(e)
   }
 
+ def p08[A](ls: List[A]): List[A] =
+   ls.foldRight(List[A]()) { (h, r) =>
+     if (r.isEmpty || r.head != h) h :: r
+     else r
+   }
+ 
+
 //  def p08(list: List[Symbol]): List[Symbol] = {
 //
 //    list.fold()
