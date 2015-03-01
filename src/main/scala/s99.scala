@@ -72,10 +72,7 @@ object s99 extends App {
   }
 
   def p15[A](i: Int, ls: List[A]): List[A] = {
-    ls
-
+    ls flatMap { e => List.fill(i)(e)}
   }
-
-
 
 }
