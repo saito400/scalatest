@@ -65,8 +65,8 @@ object s99 extends App {
     (packed.length, packed.head) :: p13(next)
   }
 
-
-
-
+  def p14[A](ls: List[A]): List[A] = {
+    ls flatMap { e => List.fill(2)(e)}
+  }
 
 }
