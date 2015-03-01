@@ -52,6 +52,7 @@ object s99 extends App {
     else packed :: p09(next)
   }
 
-
+  def p10[A](ls: List[A]): List[(Int, A)] =
+  p09(ls) map { e => (e.length, e.head) }
 
 }
