@@ -1,4 +1,3 @@
-
 object s99 extends App {
 
   println(p01(List(1, 1, 2, 3, 5, 8)))
@@ -57,5 +56,9 @@ object s99 extends App {
 
   def p11[A](ls: List[A]): List[Any] =
     p10(ls) map { t => if (t._1 == 1) t._2 else t }
+
+  def p12[A](ls: List[(Int, A)]): List[A] = 
+    ls flatMap { e => List.fill(e._1)(e._2) }
+
 
 }
