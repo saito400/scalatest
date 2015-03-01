@@ -53,6 +53,9 @@ object s99 extends App {
   }
 
   def p10[A](ls: List[A]): List[(Int, A)] =
-  p09(ls) map { e => (e.length, e.head) }
+    p09(ls) map { e => (e.length, e.head) }
+
+  def p11[A](ls: List[A]): List[Any] =
+    p10(ls) map { t => if (t._1 == 1) t._2 else t }
 
 }
