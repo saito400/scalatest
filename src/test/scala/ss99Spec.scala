@@ -1,6 +1,6 @@
 import org.scalatest._
 
-class S99Spec extends FunSpec with Matchers {
+class s99Spec extends FunSpec with Matchers {
 
   describe("s99のテスト") {
 
