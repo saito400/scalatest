@@ -60,5 +60,13 @@ object s99 extends App {
   def p12[A](ls: List[(Int, A)]): List[A] = 
     ls flatMap { e => List.fill(e._1)(e._2) }
 
+  def p13[A](ls: List[A]): List[(Int, A)] = {
+    val (packed, next) = ls span { _ == ls.head }
+    (packed.length, packed.head) :: p13(next)
+  }
+
+
+
+
 
 }
