@@ -75,4 +75,9 @@ object s99 extends App {
     ls flatMap { e => List.fill(i)(e)}
   }
 
+  def p16[A](i: Int, li: List[A]): List[A] = {
+    li.zipWithIndex filter { v => (v._2 + 1) % i != 0 } map { _._1 }
+  }
+
+
 }

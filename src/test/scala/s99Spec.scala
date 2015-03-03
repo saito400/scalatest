@@ -72,5 +72,10 @@ class s99Spec extends FunSpec with Matchers {
       s99.p15(3, List('a, 'b, 'c, 'c, 'd)) should be (List('a, 'a, 'a, 'b, 'b, 'b, 'c, 'c, 'c, 'c, 'c, 'c, 'd, 'd, 'd))
     }
 
+    it("p16") {
+      s99.p16(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)) should be (List('a, 'b, 'd, 'e, 'g, 'h, 'j, 'k))
+    }
+
+
   }
 }
