@@ -79,5 +79,10 @@ object s99 extends App {
     li.zipWithIndex filter { v => (v._2 + 1) % i != 0 } map { _._1 }
   }
 
+  def p17[A](i: Int, li: List[A]): (List[A],List[A]) = {
+    li.splitAt(i)
+
+  }
+
 
 }
