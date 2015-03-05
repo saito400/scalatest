@@ -84,5 +84,11 @@ object s99 extends App {
 
   }
 
+  def p18[A](b:Int, e:Int, l: List[A]): List[A] = {
+    l.slice(b, e)
+
+
+  }
+
 
 }
