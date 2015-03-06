@@ -86,9 +86,12 @@ object s99 extends App {
 
   def p18[A](b:Int, e:Int, l: List[A]): List[A] = {
     l.slice(b, e)
-
-
   }
 
+  def p19[A](i: Int, l: List[A]): List[A] = {
+    val p = if (i > 0) i else l.size + i
+    val (ll, lr) = l.splitAt(p)
+    lr ::: ll
+  }
 
 }
