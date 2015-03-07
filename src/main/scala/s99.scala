@@ -116,5 +116,9 @@ object s99 extends App {
       e :: p23(n - 1, rest)
     }
 
+  def p32(i: Int, j: Int) :Int = {
+    if(j == 0) i else p32(j, i % j)
+  }
+
 
 }

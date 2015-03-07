@@ -104,5 +104,10 @@ class s99Spec extends FunSpec with Matchers {
     it("p23") {
       s99.p23(3, List('a, 'b, 'c, 'd, 'f, 'g, 'h)).size should be (3)
     }
+
+    it("p32") {
+      s99.p32(36,63) should be (9)
+    }
+
   }
 }
