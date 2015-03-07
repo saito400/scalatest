@@ -94,4 +94,12 @@ object s99 extends App {
     lr ::: ll
   }
 
+  def p20[A](i: Int, l:List[A]): (List[A], A) = l.splitAt(i) match {
+    case (Nil,_) if i < 0 => throw new Exception
+    case (pre,e::post) => (pre ::: post, e)
+    case (pre, Nil) => throw new Exception
+  }
+
+
+
 }

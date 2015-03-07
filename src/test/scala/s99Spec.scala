@@ -91,5 +91,11 @@ class s99Spec extends FunSpec with Matchers {
 
     }
 
+    it("20") {
+
+      s99.p20(1, List('a, 'b, 'c, 'd)) should be (List('a, 'c, 'd),'b)
+
+    }
+
   }
 }
