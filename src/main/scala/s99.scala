@@ -105,5 +105,10 @@ object s99 extends App {
 
   }
 
+  def p22(f: Int, t: Int): List[Int] = {
+    (f to t).toList
+  }
+
+
 
 }
