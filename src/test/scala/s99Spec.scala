@@ -108,6 +108,11 @@ class s99Spec extends FunSpec with Matchers {
     it("p32") {
       s99.p32(36,63) should be (9)
     }
+  
+    it("p33") {
+      import s99.p33
+      (35.isCoprimeTo(64)) should be (true)
+    }
 
   }
 }

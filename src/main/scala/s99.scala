@@ -120,5 +120,7 @@ object s99 extends App {
     if(j == 0) i else p32(j, i % j)
   }
 
-
+  implicit class p33(val start: Int) {
+    def isCoprimeTo(n: Int): Boolean = p32(start, n) == 1
+  }
 }
