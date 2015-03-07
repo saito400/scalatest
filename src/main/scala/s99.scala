@@ -100,6 +100,10 @@ object s99 extends App {
     case (pre, Nil) => throw new Exception
   }
 
+  def p21[A](v: A, i: Int, l: List[A]) : List[A] = {
+    l.take(i) ::: List(v) ::: l.drop(i)
+
+  }
 
 
 }
