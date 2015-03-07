@@ -109,6 +109,12 @@ object s99 extends App {
     (f to t).toList
   }
 
+  def p23[A](n: Int, ls: List[A]): List[A] =
+    if (n <= 0) Nil
+    else {
+      val (rest, e) = p20((new util.Random).nextInt(ls.length), ls)
+      e :: p23(n - 1, rest)
+    }
 
 
 }

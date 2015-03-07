@@ -101,5 +101,8 @@ class s99Spec extends FunSpec with Matchers {
       s99.p22(4,9) should be (List(4, 5, 6, 7, 8, 9))
     }
 
+    it("p23") {
+      s99.p23(3, List('a, 'b, 'c, 'd, 'f, 'g, 'h)).size should be (3)
+    }
   }
 }
