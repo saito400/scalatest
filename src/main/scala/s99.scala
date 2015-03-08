@@ -125,7 +125,7 @@ object s99 extends App {
   }
 
   implicit class p34(val start: Int) {
-    def totient: Int = (1 to start) filter ( start.isCoprimeTo(_) ) length
+    def totient: Int = (1 to start).filter( start.isCoprimeTo(_) ).length
   }
 
 }
