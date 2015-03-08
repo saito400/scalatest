@@ -114,5 +114,10 @@ class s99Spec extends FunSpec with Matchers {
       (35.isCoprimeTo(64)) should be (true)
     }
 
+    it("p34") {
+      import s99.p34
+      (10.totient) should be (4)
+    }
+
   }
 }
