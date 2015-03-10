@@ -12,6 +12,10 @@ class s99Spec extends FunSpec with Matchers {
       s99.p02(List(1, 1, 2, 3, 5, 8)) should be (5)
     }
 
+    it("p02r") {
+      s99.p02r(List(1, 1, 2, 3, 5, 8)) should be (5)
+    }
+
     it("p03") {
       s99.p03(2, List(1, 1, 2, 3, 5, 8)) should be (2)
     }

@@ -12,6 +12,12 @@ object s99 extends App {
     case _ => throw new NoSuchElementException
   }
 
+  def p02r[A](l: List[A]): A = l match {
+    case Nil => throw new Exception
+    case y :: z :: Nil => y
+    case x :: y => p02r(y)
+  }
+
   def p03[A](position: Int, list: List[A]): A = {
     list(position)
   }
