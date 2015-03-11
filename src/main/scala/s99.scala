@@ -36,10 +36,17 @@ object s99 extends App {
     case (n, _ :: tail) => p03R(n - 1, tail)
   }
 
-
   def p04[A](l: List[A]): Int = {
-
     l.length
+  }
+
+  def p04r[A](l: List[A]): Int = {
+  @tailrec
+    def p04rs[A](i: Int, l: List[A]): Int = l match {
+      case Nil => i 
+      case x :: y => p04rs(i+1, y)
+    }
+    p04rs(0,l)
   }
 
   def p05[A](l: List[A]): List[A] = {
