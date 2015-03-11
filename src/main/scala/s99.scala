@@ -1,3 +1,5 @@
+import scala.annotation.tailrec
+
 object s99 extends App {
 
   println(p01(List(1, 1, 2, 3, 5, 8)))
@@ -26,6 +28,14 @@ object s99 extends App {
     case (0, h :: _) => h
     case (n, _ :: tail) => p03Recursive(n - 1, tail)
   }
+
+  @tailrec
+  def p03R[A](n: Int, list: List[A]): A = (n, list) match {
+    case (_, Nil) => throw new Exception
+    case (0, h :: _) => h
+    case (n, _ :: tail) => p03R(n - 1, tail)
+  }
+
 
   def p04[A](l: List[A]): Int = {
 
