@@ -43,13 +43,23 @@ object Main6 extends App {
   println(m7)
   m7.foreach(println _)
 
-  val m8 = v.groupBy(_._1).map{x => 
-    val l = x._2
-    val l2 = l.map(y => (y._2, y._3))
-    x._1 -> l2
+
+  val m9 = v.groupBy(_._1).map{x => 
+    x._1 -> x._2.map(y => (y._2, y._3))
   }
-  println("m8")
-  println(m8)
+  println("m9")
+  println(m9)
+
+
+  val m10 = v.groupBy(_._1).map{x => 
+
+    x._1 -> x._2.map(y => (y._2, y._3)).groupBy(_._1)
+  }
+  println("m10")
+  println(m10)
+
+
+
 
 
 
