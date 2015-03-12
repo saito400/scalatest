@@ -2,9 +2,16 @@
 object Main {
 
   def main(args: Array[String]): Unit = {
-//    println("start")
+    println("start")
+
+    val a = "aa"
+
+    val b = "bb"
+
+
 //
 //    val re = add(1, 2)
+
 //    println(re)
 //
 //    val f2 = add _
@@ -13,7 +20,6 @@ object Main {
 //
 //    println(re2)
 //
-//    println(add2(2)(3))
 //    println(add3(1, 2)(3))
 //
 //
@@ -22,7 +28,7 @@ object Main {
 //    println(a.list)
 //
 //
-//    println("end")
+    println("end")
 
   }
 
