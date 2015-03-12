@@ -23,6 +23,11 @@ object Main6 extends App {
   val m = v.groupBy(_._1)
   println(m)
 
+  val m2 = v.map(t => (t._1, t._2)).groupBy(_._1)
+  println(m2)
+
+  val m3 = v.map(t => (t._1, t._2)).groupBy(_._1).map(x => x._1 -> x._2.distinct)
+  println(m3)
 
 
 
