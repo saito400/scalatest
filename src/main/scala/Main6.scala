@@ -23,12 +23,14 @@ object Main6 extends App {
 //  println(m2)
 //
   val m3 = v.map(t => (t._1, t._2)).groupBy(_._1).map(x => x._1 -> x._2.distinct)
+  println("m3")
   println(m3)
 
 //  val m4 = v.map(t => (t._2, t._3)).groupBy(_._1)
 //  println(m4)
 
   val m5 = v.map(t => (t._2, t._3)).groupBy(_._1).map(x => x._1 -> x._2.distinct)
+  println("m5")
   println(m5)
 
   val m6 = v.groupBy(_._1).map(x => x._1 -> x._2.distinct)
@@ -40,6 +42,16 @@ object Main6 extends App {
   val m7 = m6.valuesIterator.map(t => t.map(x => (x._2,x._3)))
   println(m7)
   m7.foreach(println _)
+
+  val m8 = v.groupBy(_._1).map{x => 
+    val l = x._2
+    val l2 = l.map(y => (y._2, y._3))
+    x._1 -> l2
+  }
+  println("m8")
+  println(m8)
+
+
 
   println("end")
 
