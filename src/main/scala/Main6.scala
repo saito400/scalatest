@@ -37,8 +37,9 @@ object Main6 extends App {
   println("m6 foreach")
   m6.valuesIterator.foreach(println _)
   println("m6 map")
-  m6.valuesIterator.map(println _)
-
+  val m7 = m6.valuesIterator.map(t => t.map(x => (x._2,x._3)))
+  println(m7)
+  m7.foreach(println _)
 
   println("end")
 
