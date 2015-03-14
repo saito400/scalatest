@@ -5,9 +5,6 @@ object Main6 extends App {
 
 //  val v = Seq((1,"val1",1),(1,"val2",2),(1,"val3",3))
   val v = Seq((1,1,1),(1,1,2),(1,1,3),(1,2,1),(1,2,3),(2,1,1),(2,1,2))
-
-
-
   println(v)
 
 //  val v2 = v.map{t => t._1}.toSeq
@@ -61,6 +58,21 @@ object Main6 extends App {
   }
   println("m11")
   println(m11)
+
+  println("v")
+  println(v)
+
+  val m12 = v.groupBy(_._1)
+    .map{x => 
+      (x._1 , x._2.map{
+          y => (
+                 y._2, y._3
+               )
+        }.groupBy(_._1).map{ z => (z._1, z._2.map(zz => zz._2) )}
+      )
+    }
+  println("m12")
+  println(m12)
 
 
 
