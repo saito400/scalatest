@@ -55,6 +55,15 @@ object s99 extends App {
 
   }
 
+  def p05r[A](l: List[A]): List[A] = {
+
+    def p05rs[A](result: List[A],t: List[A]): List[A] = t match {
+      case Nil => result
+      case h :: tail => p05rs(h :: result,tail)
+    }
+    p05rs(Nil,l)
+  }
+
   def p06[A](ls: List[A]): Boolean = ls == ls.reverse
 
   def p07(ls: List[Any]): List[Any] = ls flatMap {

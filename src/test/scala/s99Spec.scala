@@ -40,6 +40,10 @@ class s99Spec extends FunSpec with Matchers {
       s99.p05(List(1, 1, 2, 3, 5, 8)) should be (List(8, 5, 3, 2, 1, 1))
     }
 
+    it("p05r") {
+      s99.p05r(List(1, 1, 2, 3, 5, 8)) should be (List(8, 5, 3, 2, 1, 1))
+    }
+
     it("p06") {
       s99.p06(List(1, 2, 3, 2, 1)) should be (true)
     }
