@@ -1,9 +1,18 @@
 package logic
 
-/*
-   This is a stub test class. To learn how to customize it,
-see the documentation for `ensime-goto-test-configs'
-*/
+import org.scalatest._
 
-class S99LogicTest {
+
+
+class S99LogicTest extends FunSpec with Matchers {
+
+  describe("s99のテスト") {
+
+    it("p46") {
+      S99Logic.p46And(true,true) should be(true)
+    }
+
+
+  }
+
 }
