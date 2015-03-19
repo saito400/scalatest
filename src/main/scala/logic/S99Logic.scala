@@ -6,6 +6,18 @@ package logic {
       case _ => false
     }
 
+    //TODO didn't work
+//    def p49(i: Int): List[String] = {
+//      if (i == 0)  List[String]("")
+//      else {
+//        val lower:List[String] =  p49(i - 1)
+//        (lower map { "0" + _ }) ::: (lower.reverse map { "1" + _ })
+//      }
+//    }
+
+
+
+
 
  }
 }
