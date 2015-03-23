@@ -8,7 +8,7 @@ object Reg extends App {
   val reg = "%\\{.+?\\}".r
 
   for (m <- reg.findAllIn(target).matchData)
-    println("Found a match  [%s)".format(m.matched))
+    println("Found a match  [%s,%s)".format(m.matched,m.matched.drop(2).dropRight(1)))
 
   println("end")
 
