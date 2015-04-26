@@ -77,6 +77,12 @@ object s99 extends App {
       else r
     }
 
+  def p08r[A](l: List[A]): List[A] = l match {
+    case Nil => Nil
+    case h::tail => h::p08r(tail.dropWhile(_ == h))
+  }
+
+
   def p09[A](ls: List[A]): List[List[A]] = {
     val (packed, next) = ls span { _ == ls.head }
     if (next == Nil) List(packed)
