@@ -77,6 +77,12 @@ object s99 extends App {
       else r
     }
 
+  def p08r[A](l: List[A]): List[A] = l match {
+    case Nil => Nil
+    case h::tail => h::p08r(tail.dropWhile(_ == h))
+  }
+
+
   def p09[A](ls: List[A]): List[List[A]] = {
     val (packed, next) = ls span { _ == ls.head }
     if (next == Nil) List(packed)
@@ -109,6 +115,15 @@ object s99 extends App {
 
   def p16[A](i: Int, li: List[A]): List[A] = {
     li.zipWithIndex filter { v => (v._2 + 1) % i != 0 } map { _._1 }
+  }
+
+  def p16r[A](i: Int, li: List[A]): List[A] = {
+    def _p16r[A](index: Int, curList: List[A]): List[A] = (index, curList) match {
+      case (_, Nil)       => Nil
+      case (1, _ :: tail) => _p16r(i, tail)
+      case (_, h :: tail) => h :: _p16r(index - 1, tail)
+    }
+    _p16r(i, li)
   }
 
   def p17[A](i: Int, li: List[A]): (List[A],List[A]) = {
