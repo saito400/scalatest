@@ -1,3 +1,4 @@
+import scala.annotation.tailrec
 
 object RecTest extends App {
 
@@ -8,6 +9,7 @@ object RecTest extends App {
 
   val l = List(Entity(0, "a"), Entity(1, "b"), Entity(2, "b"), Entity(3, "c"))
 
+//  @tailrec
   def removeDuplicates(xs: List[Entity]): List[Entity] = {
     if (xs.isEmpty) xs
     else xs.head :: removeDuplicates(
