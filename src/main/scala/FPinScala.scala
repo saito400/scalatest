@@ -50,6 +50,9 @@ object FPinScala extends App {
   println(l.tail == tail(l))
 
 
+
+
+
   println("end")
 
 }
