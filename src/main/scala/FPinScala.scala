@@ -11,11 +11,6 @@ object FPinScala extends App {
     loop(n, 0, 1)
   }
 
-  println(fib(0))
-  println(fib(1))
-  println(fib(2))
-  println(fib(3))
-
   def isSorted[A](as: Array[A], ordered: (A, A) => Boolean): Boolean = {
     @annotation.tailrec
     def go(n: Int): Boolean =
