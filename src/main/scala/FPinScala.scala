@@ -20,10 +20,6 @@ object FPinScala extends App {
     go(0)
   }
 
-  println(isSorted(Array(1,2,3), (i: Int, j: Int) => if(i < j) true else false))
-
-  println(isSorted(Array(1,2,3), (i: Int, j: Int) => if(i > j) true else false))
-
   def curry[A,B,C](f: (A, B) => C): A => (B => C) = {
     a => b => f(a, b)
   }
