@@ -22,5 +22,9 @@ class FPinScalaTest extends FunSpec with Matchers {
       FPinScala.setHead(List(1,2,3),2) should be (List(2,2,3))
     }
 
+    it("drop") {
+      FPinScala.drop(List(1,2,3),2) should be (List(3))
+    }
+
   }
 }

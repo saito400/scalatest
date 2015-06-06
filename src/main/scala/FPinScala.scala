@@ -20,15 +20,15 @@ object FPinScala extends App {
     go(0)
   }
 
-  def curry[A,B,C](f: (A, B) => C): A => (B => C) = {
+  def curry[A, B, C](f: (A, B) => C): A => (B => C) = {
     a => b => f(a, b)
   }
 
-  def uncurry[A,B,C](f: A => B => C): (A, B) => C = {
+  def uncurry[A, B, C](f: A => B => C): (A, B) => C = {
     (a, b) => f(a)(b)
   }
 
-  def compose[A,B,C](f: B => C, g: A => B): A => C = {
+  def compose[A, B, C](f: B => C, g: A => B): A => C = {
     a => f(g(a))
   }
 
@@ -40,6 +40,13 @@ object FPinScala extends App {
   def setHead[A](l: List[A], h: A): List[A] = l match {
     case Nil => Nil
     case head :: tail => h :: tail
+  }
+
+  @annotation.tailrec
+  def drop[A](l: List[A], i: Int): List[A] = (l, i) match {
+    case (Nil, _) => Nil
+    case (h, 0) => h
+    case (l, i) => drop(l.tail, i - 1)
   }
 
   println("end")
