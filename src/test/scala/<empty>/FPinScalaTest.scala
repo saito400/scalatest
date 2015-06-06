@@ -14,9 +14,12 @@ class FPinScalaTest extends FunSpec with Matchers {
       FPinScala.isSorted(Array(1,3,2), (i: Int, j: Int) => if(i < j) true else false ) should be (false)
     }
 
-
     it("tail") {
       FPinScala.tail(List(1,2,3)) should be (List(2,3))
+    }
+
+    it("setHead") {
+      FPinScala.setHead(List(1,2,3),2) should be (List(2,2,3))
     }
 
   }

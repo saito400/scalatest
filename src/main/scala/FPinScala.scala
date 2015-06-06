@@ -37,7 +37,10 @@ object FPinScala extends App {
     case h :: tail => tail
   }
 
-
+  def setHead[A](l: List[A], h: A): List[A] = l match {
+    case Nil => Nil
+    case head :: tail => h :: tail
+  }
 
   println("end")
 
