@@ -15,5 +15,9 @@ class FPinScalaTest extends FunSpec with Matchers {
     }
 
 
+    it("tail") {
+      FPinScala.tail(List(1,2,3)) should be (List(2,3))
+    }
+
   }
 }

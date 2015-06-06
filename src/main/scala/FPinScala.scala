@@ -37,11 +37,6 @@ object FPinScala extends App {
     case h :: tail => tail
   }
 
-  val l = List(1,2,3)
-  println(l.tail == tail(l))
-
-
-
 
 
   println("end")
