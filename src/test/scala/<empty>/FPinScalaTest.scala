@@ -26,5 +26,17 @@ class FPinScalaTest extends FunSpec with Matchers {
       FPinScala.drop(List(1,2,3),2) should be (List(3))
     }
 
+    it("drop 2") {
+      FPinScala.drop(List(1,2,3),1) should be (List(2, 3))
+    }
+
+    it("dropWhile") {
+      FPinScala.dropWhile(List(1,2,3),(i: Int) => if(i < 3) true else false) should be (List(3))
+    }
+
+    it("dropWhile 2") {
+      FPinScala.dropWhile(List(1,2,3),(i: Int) => if(i == 2) true else false) should be (List(1, 2, 3))
+    }
+
   }
 }

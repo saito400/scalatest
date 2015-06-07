@@ -49,6 +49,14 @@ object FPinScala extends App {
     case (l, i) => drop(l.tail, i - 1)
   }
 
+  @annotation.tailrec
+  def dropWhile[A](l: List[A], f: A => Boolean): List[A] = l match {
+    case Nil => Nil
+    case h :: tail => if (f(h) == true) dropWhile(tail, f) else h :: tail 
+  }
+
+
+
   println("end")
 
 }
