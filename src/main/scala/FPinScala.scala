@@ -55,6 +55,9 @@ object FPinScala extends App {
     case h :: tail => if (f(h) == true) dropWhile(tail, f) else h :: tail 
   }
 
+  def init[A](l: List[A]): List[A] = {
+    l.reverse.tail.reverse
+  }
 
 
   println("end")
