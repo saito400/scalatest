@@ -59,6 +59,10 @@ object FPinScala extends App {
     l.reverse.tail.reverse
   }
 
+  def length[A](l: List[A]): Int = l.foldRight(0)((_,acc) => acc + 1)
+  
+
+
 
   println("end")
 

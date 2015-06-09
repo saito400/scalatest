@@ -42,5 +42,10 @@ class FPinScalaTest extends FunSpec with Matchers {
       FPinScala.init(List(1,2,3)) should be (List(1, 2))
     }
 
+    it("length") {
+      FPinScala.length(List(1,2,3)) should be (3)
+
+    }
+
   }
 }
