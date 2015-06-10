@@ -60,7 +60,8 @@ object FPinScala extends App {
   }
 
   def length[A](l: List[A]): Int = l.foldRight(0)((_,acc) => acc + 1)
-  
+
+  def length2[A](l: List[A]): Int = l.foldLeft(0)((acc,_) => acc + 1)
 
 
 
