@@ -63,6 +63,7 @@ object FPinScala extends App {
 
   def length2[A](l: List[A]): Int = l.foldLeft(0)((acc,_) => acc + 1)
 
+  def sum(l: List[Int]): Int = l.foldLeft(0)((acc, x) => acc + x)
 
 
   println("end")
