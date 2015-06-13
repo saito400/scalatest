@@ -54,6 +54,10 @@ class FPinScalaTest extends FunSpec with Matchers {
       FPinScala.sum(List(1,2,3)) should be (6)
     }
 
+    it("product") {
+      FPinScala.sum(List(1,2,3)) should be (6)
+    }
+
 
   }
 }
