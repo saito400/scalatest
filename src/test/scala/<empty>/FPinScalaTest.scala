@@ -2,7 +2,7 @@ import org.scalatest._
 
 
 class FPinScalaTest extends FunSpec with Matchers {
-  describe("s99のテスト") {
+  describe("FP in Scalaのテスト") {
     it("fib") {
       FPinScala.fib(0) should be(0)
       FPinScala.fib(1) should be(1)
@@ -56,6 +56,14 @@ class FPinScalaTest extends FunSpec with Matchers {
 
     it("product") {
       FPinScala.sum(List(1,2,3)) should be (6)
+    }
+
+    it("reverse") {
+      FPinScala.reverse(List(1,2,3)) should be (List(3,2,1))
+    }
+
+    it("reverse 2") {
+      FPinScala.reverse(List(1,2,3,4)) should be (List(4,3,2,1))
     }
 
 

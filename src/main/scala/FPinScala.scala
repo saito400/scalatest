@@ -67,6 +67,10 @@ object FPinScala extends App {
 
   def product(l: List[Int]): Int = l.foldLeft(0)((acc, x) => acc * x)
 
+//  def reverse[A](l: List[A]): List[A] = l.foldRight(Nil)((x, acc)  => acc :: x)
+//  def reverse[A](l: List[A]): List[A] = foldLeft(l, List[A]())((acc,h) => Cons(h,acc))
+
+  def reverse[A](l: List[A]): List[A] = l.foldLeft(List[A]())((acc, h) => h :: acc)
 
   println("end")
 
